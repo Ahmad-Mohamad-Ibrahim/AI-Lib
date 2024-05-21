@@ -327,3 +327,7 @@ body {
 ::placeholder {
     color: #abb2bf;
 }
+
+.line {
+    @apply h-[2px] w-[100%] inline-block bg-white;
+}

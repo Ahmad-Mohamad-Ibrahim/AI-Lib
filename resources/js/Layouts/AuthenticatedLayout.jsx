@@ -10,6 +10,7 @@ export default function Authenticated({ user, header, children }) {
             <div className="w-full">
                 {children}
             </div>
+            <Footer />
         </div>
     );
 }

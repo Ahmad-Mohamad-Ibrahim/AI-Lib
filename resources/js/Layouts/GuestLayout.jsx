@@ -1,4 +1,5 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
+import Footer from '@/Components/Footer';
 import Navbar from '@/Components/Navbar';
 
 export default function Guest({ children }) {
@@ -9,6 +10,7 @@ export default function Guest({ children }) {
             <div className="w-full">
                 {children}
             </div>
+            <Footer />
         </div>
     );
 }
