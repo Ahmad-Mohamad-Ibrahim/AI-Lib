@@ -21,6 +21,7 @@
         "vite-plugin-inspect": "^0.8.4"
     },
     "dependencies": {
+        "typeit-react": "^2.7.1",
         "typewriter-effect": "^2.21.0"
     }
 }

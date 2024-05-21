@@ -7,19 +7,22 @@
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     color: white;
+    background-color: #05081a;
 }
 
 @layer components {
     .header-1-sm {
-        @apply text-3xl font-bold ;
+        @apply text-3xl font-bold;
     }
+
     .header-1-lg {
         @apply text-6xl font-bold;
     }
 
     .header-2-sm {
-        @apply text-2xl font-bold ;
+        @apply text-2xl font-bold;
     }
+
     .header-2-lg {
         @apply text-4xl font-bold;
     }
@@ -32,11 +35,10 @@ body {
 
 /* Chat Card */
 .chat-card {
-     @apply bg-secondary border-2 rounded-lg p-8;
+    @apply bg-secondary border-2 rounded-lg p-8;
 }
 
-.chat-card-content {
-}
+/* .chat-card-content {} */
 
 .invisible {
     visibility: hidden;
@@ -168,3 +170,160 @@ body {
     font-style: italic;
 }
 
+/* Loader */
+.svg-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-frame svg {
+    position: absolute;
+    transition: .5s;
+    z-index: calc(1 - (0.2 * var(--j)));
+    transform-origin: center;
+    width: 344px;
+    height: 344px;
+    fill: none;
+}
+
+.svg-frame:hover svg {
+    transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+    transition: .5s;
+    transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+    transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+    animation: rotate16 7s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+#out3 {
+    animation: rotate16 3s ease-in-out infinite alternate;
+    transform-origin: center;
+    stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+    animation: rotate16 4s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+#center1 {
+    fill: #ff0;
+    animation: rotate16 2s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes rotate16 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Buttons */
+.button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(59, 48, 78, 0.527);
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button svg {
+    margin-right: 8px;
+    width: 25px;
+}
+
+.button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(88, 71, 116, 0.627);
+}
+
+.button:active {
+    box-shadow: 0 0.3em 1em -0.5em rgba(88, 71, 116, 0.627);
+}
+
+.button::before {
+    content: "";
+    width: 4px;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.button::after {
+    content: "";
+    width: 4px;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right: 0;
+    transition: all 0.2s;
+}
+
+.button:hover::before,
+.button:hover::after {
+    height: 60%;
+}
+
+/* Search */
+
+.inputBox_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-width: 14em;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: #182752; */
+    border-radius: 0.8em;
+    overflow: hidden;
+}
+
+.search_icon {
+    height: 1em;
+    padding: 0 0.5em 0 0.8em;
+    fill: #abb2bf;
+}
+
+.inputBox {
+    cursor: text;
+    background-color: transparent;
+    color: #ffffff;
+    /* background-color: #5c6370; */
+    outline: none;
+    width: 100%;
+    border: 0;
+    padding: 0.5em 1.5em 0.5em 0.5em;
+    font-size: 1em;
+}
+
+::placeholder {
+    color: #abb2bf;
+}

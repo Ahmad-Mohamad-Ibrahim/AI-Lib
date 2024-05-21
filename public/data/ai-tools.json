@@ -1,0 +1,1072 @@
+[
+    {
+        "id": 1,
+        "name": "TensorFlow",
+        "website": "https://www.tensorflow.org",
+        "launch_date": "2015-11-09",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Machine Learning Framework"
+    },
+    {
+        "id": 2,
+        "name": "PyTorch",
+        "website": "https://pytorch.org",
+        "launch_date": "2016-09-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Machine Learning Framework"
+    },
+    {
+        "id": 3,
+        "name": "OpenAI GPT-3",
+        "website": "https://openai.com",
+        "launch_date": "2020-06-11",
+        "description": "",
+        "rating": 4.9,
+        "is_accessible": false,
+        "category": "Natural Language Processing"
+    },
+    {
+        "id": 4,
+        "name": "IBM Watson",
+        "website": "https://www.ibm.com/watson",
+        "launch_date": "2011-02-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "AI Platform"
+    },
+    {
+        "id": 5,
+        "name": "H2O.ai",
+        "website": "https://www.h2o.ai",
+        "launch_date": "2011-07-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Machine Learning Platform"
+    },
+    {
+        "id": 6,
+        "name": "Amazon SageMaker",
+        "website": "https://aws.amazon.com/sagemaker",
+        "launch_date": "2017-11-29",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Machine Learning Platform"
+    },
+    {
+        "id": 7,
+        "name": "Google Cloud AI",
+        "website": "https://cloud.google.com/products/ai",
+        "launch_date": "2018-04-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "AI Platform"
+    },
+    {
+        "id": 8,
+        "name": "Microsoft Azure AI",
+        "website": "https://azure.microsoft.com/en-us/services/cognitive-services/",
+        "launch_date": "2015-02-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "AI Platform"
+    },
+    {
+        "id": 9,
+        "name": "DataRobot",
+        "website": "https://www.datarobot.com",
+        "launch_date": "2012-02-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Automated Machine Learning"
+    },
+    {
+        "id": 10,
+        "name": "RapidMiner",
+        "website": "https://www.rapidminer.com",
+        "launch_date": "2007-06-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Data Science Platform"
+    },
+    {
+        "id": 11,
+        "name": "Caffe",
+        "website": "http://caffe.berkeleyvision.org",
+        "launch_date": "2014-04-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Deep Learning Framework"
+    },
+    {
+        "id": 12,
+        "name": "Apache MXNet",
+        "website": "https://mxnet.apache.org",
+        "launch_date": "2015-06-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Deep Learning Framework"
+    },
+    {
+        "id": 13,
+        "name": "Keras",
+        "website": "https://keras.io",
+        "launch_date": "2015-03-27",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Deep Learning Framework"
+    },
+    {
+        "id": 14,
+        "name": "Theano",
+        "website": "http://deeplearning.net/software/theano/",
+        "launch_date": "2007-06-01",
+        "description": "",
+        "rating": 4.2,
+        "is_accessible": false,
+        "category": "Deep Learning Framework"
+    },
+    {
+        "id": 15,
+        "name": "CNTK",
+        "website": "https://github.com/microsoft/CNTK",
+        "launch_date": "2016-01-25",
+        "description": "",
+        "rating": 4.1,
+        "is_accessible": false,
+        "category": "Deep Learning Framework"
+    },
+    {
+        "id": 16,
+        "name": "Scikit-learn",
+        "website": "https://scikit-learn.org",
+        "launch_date": "2007-07-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Machine Learning Library"
+    },
+    {
+        "id": 17,
+        "name": "Pandas",
+        "website": "https://pandas.pydata.org",
+        "launch_date": "2008-01-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Data Analysis Library"
+    },
+    {
+        "id": 18,
+        "name": "NLTK",
+        "website": "https://www.nltk.org",
+        "launch_date": "2001-10-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Natural Language Processing"
+    },
+    {
+        "id": 19,
+        "name": "SpaCy",
+        "website": "https://spacy.io",
+        "launch_date": "2015-10-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Natural Language Processing"
+    },
+    {
+        "id": 20,
+        "name": "Gensim",
+        "website": "https://radimrehurek.com/gensim/",
+        "launch_date": "2009-11-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Topic Modeling"
+    },
+    {
+        "id": 21,
+        "name": "Chainer",
+        "website": "https://chainer.org",
+        "launch_date": "2015-06-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Deep Learning Framework"
+    },
+    {
+        "id": 22,
+        "name": "Hugging Face Transformers",
+        "website": "https://huggingface.co/transformers/",
+        "launch_date": "2019-02-01",
+        "description": "",
+        "rating": 4.9,
+        "is_accessible": false,
+        "category": "Natural Language Processing"
+    },
+    {
+        "id": 23,
+        "name": "OpenCV",
+        "website": "https://opencv.org",
+        "launch_date": "2000-06-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Computer Vision Library"
+    },
+    {
+        "id": 24,
+        "name": "D3.js",
+        "website": "https://d3js.org",
+        "launch_date": "2011-02-18",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Data Visualization Library"
+    },
+    {
+        "id": 25,
+        "name": "Plotly",
+        "website": "https://plotly.com",
+        "launch_date": "2013-12-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Data Visualization Library"
+    },
+    {
+        "id": 26,
+        "name": "Tableau",
+        "website": "https://www.tableau.com",
+        "launch_date": "2003-04-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Data Visualization Platform"
+    },
+    {
+        "id": 27,
+        "name": "QlikView",
+        "website": "https://www.qlik.com/us/products/qlikview",
+        "launch_date": "1994-12-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Data Visualization Platform"
+    },
+    {
+        "id": 28,
+        "name": "Power BI",
+        "website": "https://powerbi.microsoft.com",
+        "launch_date": "2014-07-24",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Data Visualization Platform"
+    },
+    {
+        "id": 29,
+        "name": "Alteryx",
+        "website": "https://www.alteryx.com",
+        "launch_date": "1997-03-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Data Analytics Platform"
+    },
+    {
+        "id": 30,
+        "name": "KNIME",
+        "website": "https://www.knime.com",
+        "launch_date": "2008-04-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Data Analytics Platform"
+    },
+    {
+        "id": 31,
+        "name": "RapidMiner",
+        "website": "https://www.rapidminer.com",
+        "launch_date": "2007-06-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Data Science Platform"
+    },
+    {
+        "id": 32,
+        "name": "Databricks",
+        "website": "https://databricks.com",
+        "launch_date": "2013-09-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Data Science Platform"
+    },
+    {
+        "id": 33,
+        "name": "Anaconda",
+        "website": "https://www.anaconda.com",
+        "launch_date": "2012-07-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Data Science Platform"
+    },
+    {
+        "id": 34,
+        "name": "Dataiku",
+        "website": "https://www.dataiku.com",
+        "launch_date": "2013-12-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Data Science Platform"
+    },
+    {
+        "id": 35,
+        "name": "Jupyter",
+        "website": "https://jupyter.org",
+        "launch_date": "2014-07-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Interactive Computing"
+    },
+    {
+        "id": 36,
+        "name": "Kaggle",
+        "website": "https://www.kaggle.com",
+        "launch_date": "2010-04-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Data Science Community"
+    },
+    {
+        "id": 37,
+        "name": "GitHub Copilot",
+        "website": "https://github.com/features/copilot",
+        "launch_date": "2021-06-29",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Code Generation"
+    },
+    {
+        "id": 38,
+        "name": "TabNine",
+        "website": "https://www.tabnine.com",
+        "launch_date": "2019-02-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Code Generation"
+    },
+    {
+        "id": 39,
+        "name": "Repl.it",
+        "website": "https://replit.com",
+        "launch_date": "2016-03-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Online IDE"
+    },
+    {
+        "id": 40,
+        "name": "DeepL",
+        "website": "https://www.deepl.com",
+        "launch_date": "2017-08-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Translation"
+    },
+    {
+        "id": 41,
+        "name": "Grammarly",
+        "website": "https://www.grammarly.com",
+        "launch_date": "2009-07-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Writing Assistant"
+    },
+    {
+        "id": 42,
+        "name": "ProWritingAid",
+        "website": "https://prowritingaid.com",
+        "launch_date": "2012-06-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Writing Assistant"
+    },
+    {
+        "id": 43,
+        "name": "QuillBot",
+        "website": "https://quillbot.com",
+        "launch_date": "2017-04-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Writing Assistant"
+    },
+    {
+        "id": 44,
+        "name": "Lumen5",
+        "website": "https://www.lumen5.com",
+        "launch_date": "2017-01-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Video Creation"
+    },
+    {
+        "id": 45,
+        "name": "Animoto",
+        "website": "https://animoto.com",
+        "launch_date": "2006-08-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Video Creation"
+    },
+    {
+        "id": 46,
+        "name": "Magisto",
+        "website": "https://www.magisto.com",
+        "launch_date": "2010-12-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Video Editing"
+    },
+    {
+        "id": 47,
+        "name": "Synthesia",
+        "website": "https://www.synthesia.io",
+        "launch_date": "2017-10-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Video Generation"
+    },
+    {
+        "id": 48,
+        "name": "Descript",
+        "website": "https://www.descript.com",
+        "launch_date": "2017-12-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Audio/Video Editing"
+    },
+    {
+        "id": 49,
+        "name": "Sonix",
+        "website": "https://sonix.ai",
+        "launch_date": "2017-06-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Transcription"
+    },
+    {
+        "id": 50,
+        "name": "Rev",
+        "website": "https://www.rev.com",
+        "launch_date": "2010-05-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Transcription"
+    },
+    {
+        "id": 51,
+        "name": "Otter.ai",
+        "website": "https://otter.ai",
+        "launch_date": "2016-09-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Transcription"
+    },
+    {
+        "id": 52,
+        "name": "Fireflies.ai",
+        "website": "https://fireflies.ai",
+        "launch_date": "2016-12-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Transcription"
+    },
+    {
+        "id": 53,
+        "name": "Temi",
+        "website": "https://www.temi.com",
+        "launch_date": "2017-08-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Transcription"
+    },
+    {
+        "id": 54,
+        "name": "DeepGram",
+        "website": "https://deepgram.com",
+        "launch_date": "2015-01-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Speech Recognition"
+    },
+    {
+        "id": 55,
+        "name": "Symbl.ai",
+        "website": "https://symbl.ai",
+        "launch_date": "2018-09-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Speech Recognition"
+    },
+    {
+        "id": 56,
+        "name": "AssemblyAI",
+        "website": "https://www.assemblyai.com",
+        "launch_date": "2017-05-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Speech Recognition"
+    },
+    {
+        "id": 57,
+        "name": "Speechmatics",
+        "website": "https://www.speechmatics.com",
+        "launch_date": "2006-07-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Speech Recognition"
+    },
+    {
+        "id": 58,
+        "name": "Kaldi",
+        "website": "https://kaldi-asr.org",
+        "launch_date": "2011-01-01",
+        "description": "",
+        "rating": 4.2,
+        "is_accessible": false,
+        "category": "Speech Recognition"
+    },
+    {
+        "id": 59,
+        "name": "Resemble AI",
+        "website": "https://www.resemble.ai",
+        "launch_date": "2018-01-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Voice Synthesis"
+    },
+    {
+        "id": 60,
+        "name": "Replica Studios",
+        "website": "https://replicastudios.com",
+        "launch_date": "2019-04-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Voice Synthesis"
+    },
+    {
+        "id": 61,
+        "name": "Lyrebird",
+        "website": "https://lyrebird.ai",
+        "launch_date": "2017-02-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Voice Synthesis"
+    },
+    {
+        "id": 62,
+        "name": "Murf AI",
+        "website": "https://murf.ai",
+        "launch_date": "2019-07-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Voice Synthesis"
+    },
+    {
+        "id": 63,
+        "name": "Synthesys",
+        "website": "https://synthesys.io",
+        "launch_date": "2019-03-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Voice Synthesis"
+    },
+    {
+        "id": 64,
+        "name": "D-ID",
+        "website": "https://www.d-id.com",
+        "launch_date": "2017-07-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Deepfake Technology"
+    },
+    {
+        "id": 65,
+        "name": "DeepArt",
+        "website": "https://deepart.io",
+        "launch_date": "2016-03-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 66,
+        "name": "Artbreeder",
+        "website": "https://www.artbreeder.com",
+        "launch_date": "2018-01-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 67,
+        "name": "RunwayML",
+        "website": "https://runwayml.com",
+        "launch_date": "2018-06-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Creative Tool"
+    },
+    {
+        "id": 68,
+        "name": "DeepDream",
+        "website": "https://deepdreamgenerator.com",
+        "launch_date": "2015-06-17",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 69,
+        "name": "Prisma",
+        "website": "https://prisma-ai.com",
+        "launch_date": "2016-06-11",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 70,
+        "name": "DeepFaceLab",
+        "website": "https://github.com/iperov/DeepFaceLab",
+        "launch_date": "2018-01-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Deepfake Technology"
+    },
+    {
+        "id": 71,
+        "name": "FaceApp",
+        "website": "https://www.faceapp.com",
+        "launch_date": "2017-01-24",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 72,
+        "name": "Fotor",
+        "website": "https://www.fotor.com",
+        "launch_date": "2012-10-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 73,
+        "name": "Pixlr",
+        "website": "https://pixlr.com",
+        "launch_date": "2008-08-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 74,
+        "name": "Adobe Photoshop",
+        "website": "https://www.adobe.com/products/photoshop.html",
+        "launch_date": "1990-02-19",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 75,
+        "name": "Affinity Photo",
+        "website": "https://affinity.serif.com/en-us/photo/",
+        "launch_date": "2015-07-09",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 76,
+        "name": "Luminar AI",
+        "website": "https://skylum.com/luminar",
+        "launch_date": "2020-12-15",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 77,
+        "name": "VSCO",
+        "website": "https://vsco.co",
+        "launch_date": "2011-11-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 78,
+        "name": "Remove.bg",
+        "website": "https://www.remove.bg",
+        "launch_date": "2018-12-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 79,
+        "name": "Cleanup.Pictures",
+        "website": "https://cleanup.pictures",
+        "launch_date": "2020-01-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 80,
+        "name": "Deep Nostalgia",
+        "website": "https://www.myheritage.com/deep-nostalgia",
+        "launch_date": "2021-02-25",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Image Animation"
+    },
+    {
+        "id": 81,
+        "name": "MyHeritage In Color",
+        "website": "https://www.myheritage.com/incolor",
+        "launch_date": "2020-02-12",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Image Colorization"
+    },
+    {
+        "id": 82,
+        "name": "Colorize",
+        "website": "https://play.google.com/store/apps/details?id=com.ims.colorize&hl=en&gl=US",
+        "launch_date": "2019-07-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Image Colorization"
+    },
+    {
+        "id": 83,
+        "name": "GIMP",
+        "website": "https://www.gimp.org",
+        "launch_date": "1996-06-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Image Editing"
+    },
+    {
+        "id": 84,
+        "name": "Inkscape",
+        "website": "https://inkscape.org",
+        "launch_date": "2003-11-02",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Vector Graphics"
+    },
+    {
+        "id": 85,
+        "name": "Blender",
+        "website": "https://www.blender.org",
+        "launch_date": "1998-01-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "3D Modeling"
+    },
+    {
+        "id": 86,
+        "name": "Unity",
+        "website": "https://unity.com",
+        "launch_date": "2005-06-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Game Development"
+    },
+    {
+        "id": 87,
+        "name": "Unreal Engine",
+        "website": "https://www.unrealengine.com",
+        "launch_date": "1998-05-01",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": false,
+        "category": "Game Development"
+    },
+    {
+        "id": 88,
+        "name": "Godot Engine",
+        "website": "https://godotengine.org",
+        "launch_date": "2014-01-15",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Game Development"
+    },
+    {
+        "id": 89,
+        "name": "CryEngine",
+        "website": "https://www.cryengine.com",
+        "launch_date": "2002-05-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Game Development"
+    },
+    {
+        "id": 90,
+        "name": "SpriteKit",
+        "website": "https://developer.apple.com/spritekit/",
+        "launch_date": "2013-09-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Game Development"
+    },
+    {
+        "id": 91,
+        "name": "GameMaker Studio",
+        "website": "https://www.yoyogames.com/gamemaker",
+        "launch_date": "1999-11-15",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Game Development"
+    },
+    {
+        "id": 92,
+        "name": "TensorFlow Lite",
+        "website": "https://www.tensorflow.org/lite",
+        "launch_date": "2017-11-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Machine Learning Framework"
+    },
+    {
+        "id": 93,
+        "name": "ONNX",
+        "website": "https://onnx.ai",
+        "launch_date": "2017-12-01",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Machine Learning Framework"
+    },
+    {
+        "id": 94,
+        "name": "Apache Mahout",
+        "website": "https://mahout.apache.org",
+        "launch_date": "2008-04-01",
+        "description": "",
+        "rating": 4.2,
+        "is_accessible": false,
+        "category": "Machine Learning Library"
+    },
+    {
+        "id": 95,
+        "name": "Shogun",
+        "website": "https://www.shogun-toolbox.org",
+        "launch_date": "2010-04-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Machine Learning Library"
+    },
+    {
+        "id": 96,
+        "name": "Accord.NET",
+        "website": "http://accord-framework.net",
+        "launch_date": "2010-11-01",
+        "description": "",
+        "rating": 4.3,
+        "is_accessible": false,
+        "category": "Machine Learning Library"
+    },
+    {
+        "id": 97,
+        "name": "Weka",
+        "website": "https://www.cs.waikato.ac.nz/ml/weka/",
+        "launch_date": "1997-06-01",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Machine Learning Library"
+    },
+    {
+        "id": 98,
+        "name": "Hugging Face Datasets",
+        "website": "https://huggingface.co/datasets",
+        "launch_date": "2020-07-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Dataset"
+    },
+    {
+        "id": 99,
+        "name": "Kaggle Datasets",
+        "website": "https://www.kaggle.com/datasets",
+        "launch_date": "2016-04-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Dataset"
+    },
+    {
+        "id": 100,
+        "name": "UCI Machine Learning Repository",
+        "website": "https://archive.ics.uci.edu/ml/index.php",
+        "launch_date": "1987-06-01",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Dataset"
+    },
+    {
+        "id": 101,
+        "name": "Google Bard",
+        "website": "https://bard.google.com",
+        "launch_date": "2023-03-21",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Natural Language Processing"
+    },
+    {
+        "id": 102,
+        "name": "ChatGPT",
+        "website": "https://openai.com/chatgpt",
+        "launch_date": "2022-11-30",
+        "description": "",
+        "rating": 4.8,
+        "is_accessible": true,
+        "category": "Natural Language Processing"
+    },
+    {
+        "id": 103,
+        "name": "DALL-E",
+        "website": "https://openai.com/dall-e",
+        "launch_date": "2021-01-05",
+        "description": "",
+        "rating": 4.7,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 104,
+        "name": "Midjourney",
+        "website": "https://www.midjourney.com",
+        "launch_date": "2022-07-12",
+        "description": "",
+        "rating": 4.5,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 105,
+        "name": "Stable Diffusion",
+        "website": "https://stability.ai/stable-diffusion",
+        "launch_date": "2022-08-22",
+        "description": "",
+        "rating": 4.4,
+        "is_accessible": false,
+        "category": "Art Generation"
+    },
+    {
+        "id": 106,
+        "name": "Hugging Face",
+        "website": "https://huggingface.co",
+        "launch_date": "2016-11-01",
+        "description": "",
+        "rating": 4.6,
+        "is_accessible": false,
+        "category": "Data Science Community"
+    },
+    {
+        "id": 110,
+        "name": "Wit.ai",
+        "website": "https://wit.ai",
+        "launch_date": "2013-12-01",
+        "description": "",
+        "rating": 4.2,
+        "is_accessible": false,
+        "category": "Natural Language Processing"
+    }
+]

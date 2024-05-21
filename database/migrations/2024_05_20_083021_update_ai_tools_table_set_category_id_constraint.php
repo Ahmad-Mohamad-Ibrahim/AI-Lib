@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('ai_tools', function (Blueprint $table) {
             $table->foreignIdFor(\App\Models\Category::class, 'category_id')->constrained()->cascadeOnDelete();
         });
     }

@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('ai_tools', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description');
             $table->string('website');
             $table->date('launch_date');
             $table->float('rating');
+            $table->boolean('is_accessible');
             $table->timestamps();
         });
 

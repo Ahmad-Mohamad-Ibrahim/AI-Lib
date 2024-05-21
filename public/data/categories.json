@@ -1,0 +1,180 @@
+[
+    {
+        "id": 1,
+        "name": "Machine Learning Framework",
+        "image": ""
+    },
+    {
+        "id": 2,
+        "name": "Natural Language Processing",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "name": "AI Platform",
+        "image": ""
+    },
+    {
+        "id": 4,
+        "name": "Machine Learning Platform",
+        "image": ""
+
+    },
+    {
+        "id": 5,
+        "name": "Automated Machine Learning",
+        "image": ""
+    },
+    {
+        "id": 10,
+        "name": "Data Science Platform",
+        "image": ""
+    },
+    {
+        "id": 11,
+        "name": "Deep Learning Framework",
+        "image": ""
+    },
+    {
+        "id": 16,
+        "name": "Machine Learning Library",
+        "image": ""
+    },
+    {
+        "id": 17,
+        "name": "Data Analysis Library",
+        "image": ""
+    },
+    {
+        "id": 20,
+        "name": "Topic Modeling",
+        "image": ""
+    },
+    {
+        "id": 23,
+        "name": "Computer Vision Library",
+        "image": ""
+    },
+    {
+        "id": 24,
+        "name": "Data Visualization Library",
+        "image": ""
+    },
+    {
+        "id": 26,
+        "name": "Data Visualization Platform",
+        "image": ""
+    },
+    {
+        "id": 29,
+        "name": "Data Analytics Platform",
+        "image": ""
+    },
+
+    {
+        "id": 35,
+        "name": "Interactive Computing",
+        "image": ""
+    },
+    {
+        "id": 36,
+        "name": "Data Science Community",
+        "image": ""
+    },
+    {
+        "id": 37,
+        "name": "Code Generation",
+        "image": ""
+    },
+    {
+        "id": 39,
+        "name": "Online IDE",
+        "image": ""
+    },
+    {
+        "id": 40,
+        "name": "Translation",
+        "image": ""
+    },
+    {
+        "id": 41,
+        "name": "Writing Assistant",
+        "image": ""
+    },
+    {
+        "id": 44,
+        "name": "Video Creation",
+        "image": ""
+    },
+    {
+        "id": 46,
+        "name": "Video Editing",
+        "image": ""
+    },
+    {
+        "id": 47,
+        "name": "Video Generation",
+        "image": ""
+    },
+    {
+        "id": 48,
+        "name": "Audio/Video Editing",
+        "image": ""
+    },
+    {
+        "id": 49,
+        "name": "Transcription",
+        "image": ""
+    },
+    {
+        "id": 54,
+        "name": "Speech Recognition",
+        "image": ""
+    },
+    {
+        "id": 59,
+        "name": "Voice Synthesis",
+        "image": ""
+    },
+    {
+        "id": 64,
+        "name": "Deepfake Technology",
+        "image": ""
+    },
+    {
+        "id": 65,
+        "name": "Art Generation",
+        "image": ""
+    },
+    
+    {
+        "id": 67,
+        "name": "Creative Tool",
+        "image": ""
+    },
+    {
+        "id": 71,
+        "name": "Image Editing",
+        "image": ""
+    },
+    {
+        "id": 80,
+        "name": "Image Animation",
+        "image": ""
+    },
+    {
+        "id": 81,
+        "name": "Image Colorization",
+        "image": ""
+    },
+    {
+        "id": 98,
+        "name": "Dataset",
+        "image": ""
+    },
+    {
+        "id": 100,
+        "name": "Other",
+        "image": ""
+    }
+]
