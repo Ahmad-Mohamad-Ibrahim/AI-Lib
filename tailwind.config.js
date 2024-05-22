@@ -35,7 +35,7 @@ export default {
                 secondary: "#080E2C"
             },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 poppins: ['Poppins']
             },
         },

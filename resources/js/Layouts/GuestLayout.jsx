@@ -2,10 +2,10 @@ import ApplicationLogo from '@/Components/ApplicationLogo';
 import Footer from '@/Components/Footer';
 import Navbar from '@/Components/Navbar';
 
-export default function Guest({ children }) {
+export default function Guest({ auth, children }) {
     return (
         <div className="min-h-screen">
-            <Navbar url="/home" />
+            <Navbar auth={auth} url="/home" />
 
             <div className="w-full">
                 {children}

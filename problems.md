@@ -89,3 +89,47 @@ Source: Conversation with Copilot, 5/21/2024
 (5) How to Create Delays in between Animations in React Native. https://codingwithrashid.com/react-native-animation-tutorial-series-part-9-how-to-create-delays-in-between-animations-in-react-native/.
 (6) github.com. https://github.com/giranm/pd-live-react/tree/fefc222157bf9b3d74f700159441f6108472e23d/src%2Fcomponents%2FIncidentTable%2FIncidentTableComponent.js.
 (7) en.wikipedia.org. https://en.wikipedia.org/wiki/React_(JavaScript_library).
+
+Footer
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About AI Tools Library</h3>
+            <p>
+                AI Tools Library is your go-to resource for discovering the latest and most popular AI tools, products, and software. Our mission is to empower developers, data scientists, and businesses by providing comprehensive information and reviews on a wide range of AI solutions.
+            </p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/tools">AI Tools</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter to get the latest updates on AI tools and technologies.</p>
+            <form action="/subscribe" method="post">
+                <input type="email" name="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:support@aitoolslibrary.com">support@aitoolslibrary.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <div class="socials">
+                <a href="https://facebook.com/aitoolslibrary" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/aitoolslibrary" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/aitoolslibrary" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 AI Tools Library. All rights reserved.</p>
+    </div>
+</footer>

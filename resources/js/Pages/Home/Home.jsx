@@ -4,20 +4,20 @@ import AiToolsSection from "./Partials/AiToolsSection";
 import Authenticated from "@/Layouts/AuthenticatedLayout";
 import HeroSection from "./Partials/HeroSection";
 
-export default function Home({ isAuth }) {
+export default function Home({ auth }) {
 
 
 
     return (
         <>
             {
-            isAuth ? <Authenticated>
+            auth.user ? <Authenticated auth={auth}>
                 < Head title="Home" />
                 <HeroSection />
 
                 <AiToolsSection />
-            </Authenticated > :
-                <Guest>
+            </Authenticated> :
+                <Guest auth={auth}>
                     <Head title="Home" />
                     <HeroSection />
 

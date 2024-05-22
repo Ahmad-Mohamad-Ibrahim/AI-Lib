@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import Navbar from '@/Components/Navbar';
 
-export default function Authenticated({ user, header, children }) {
+export default function Authenticated({auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
         <div className="min-h-screen">
-            <Navbar url="/home" isAuth={true} />
+            <Navbar auth={auth} url="/home"/>
             <div className="w-full">
                 {children}
             </div>

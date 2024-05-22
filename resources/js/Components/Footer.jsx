@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Logo from "../../images/logo-2.jpg";
+import { UilFacebookF, UilTwitter, UilInstagram } from '@iconscout/react-unicons'
 
 export default function Footer() {
     return (
@@ -6,12 +8,12 @@ export default function Footer() {
             <div className="flex gap-8">
 
                 <div className="flex w-[30%] items-center gap-16">
-                    <h4 class="font-bold text-4xl">Lib AI</h4>
-                    <img width="64" height="64" src="https://laracasts.com/images/logo/logo-triangle.svg"
+                    <h4 class="font-bold text-4xl">AI Arsenal</h4>
+                    <img width="96" height="96" src={Logo}
                         alt="Company Logo" />
                 </div>
                 <div className="flex flex-col gap-4 max-w-[30%]">
-                    <strong className="font-bold text-xl">About AI Lib</strong>
+                    <strong className="font-bold text-xl">About AI Arsenal</strong>
 
                     <p>
                         AI Tools Library is your go-to resource for discovering the latest and most popular AI tools, products, and software. Our mission is to empower developers, data scientists, and businesses by providing comprehensive information and reviews on a wide range of AI solutions.
@@ -48,9 +50,22 @@ export default function Footer() {
             </div>
             <div className="line mb-12 mt-32"></div>
             <div className="flex gap-8 justify-center items-center">
-                <p>fa</p>
-                <p>Tw</p>
-                <p>Ins</p>
+                <a href="#" target="_blank">
+                    <UilFacebookF color="#ffffff"></UilFacebookF>
+
+                </a>
+                <a href="#" target="_blank">
+                    <UilTwitter color="#ffffff" />
+
+                </a>
+                <a href="#" target="_blank">
+                    <UilInstagram color="#ffffff" />
+                </a>
+
+            </div>
+
+            <div class="text-center my-8">
+                <p>&copy; 2024 AI Arsenal. All rights reserved.</p>
             </div>
 
         </footer>

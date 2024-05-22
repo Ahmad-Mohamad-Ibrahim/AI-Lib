@@ -1,28 +1,29 @@
 import NavLink from "./NavLink";
+import LogoNoBg from "../../images/logo-2-no-bg.png";
 import NavLinkMobile from "./NavLinkMobile";
 
-export default function Navbar({ url, user, isAuth }) {
+export default function Navbar({ auth, url }) {
     return (
         <nav className="bg-secondary text-white">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <img className="h-8 w-8" src="https://laracasts.com/images/logo/logo-triangle.svg"
+                            <img className="h-16 w-16" src={LogoNoBg}
                                 alt="Your Company" />
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 <NavLink href="/home" active={url == "/home"} >Home</NavLink>
-                                <NavLink href="/jobs" active={url == "/jobs"}>Jobs</NavLink>
-                                <NavLink href="/contacts" active={url == "/jobs"}>Contacts
+                                <NavLink href="/tools" active={url == "/tools"}>Tools</NavLink>
+                                <NavLink href="/contacts" active={url == "/contact"}>Contacts
                                 </NavLink>
 
                             </div>
                         </div>
                     </div>
 
-                    {isAuth && <div className="hidden md:block">
+                    {auth.user && <div className="hidden md:block">
                         <div className="ml-4 flex items-center md:ml-6">
                             <button type="button"
                                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -73,7 +74,7 @@ export default function Navbar({ url, user, isAuth }) {
             <div className="md:hidden" id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                     <NavLinkMobile href="/home" active={url == "/home"}>Home</NavLinkMobile>
-                    <NavLinkMobile href="/jobs" active={url == "/jobs"}>Jobs</NavLinkMobile>
+                    <NavLinkMobile href="/tools" active={url == "/tools"}>Tools</NavLinkMobile>
                     <NavLinkMobile href="/contacts" active={url == "/contacts"}>Contacts</NavLinkMobile>
 
                 </div>

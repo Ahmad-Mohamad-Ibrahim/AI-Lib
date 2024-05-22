@@ -30,6 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('user_badge');
         Schema::dropIfExists('badges');
     }
 };

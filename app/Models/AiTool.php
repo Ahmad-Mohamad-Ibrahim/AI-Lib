@@ -15,7 +15,7 @@ class AiTool extends Model
         'description',
         'website',
         'launch_date',
-        'rating'
+        'rating',
     ];
 
     public function category() : BelongsTo   

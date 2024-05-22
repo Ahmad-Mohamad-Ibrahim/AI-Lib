@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('website');
+            $table->string('image')->nullable();
             $table->date('launch_date');
             $table->float('rating');
             $table->boolean('is_accessible');
+            $table->boolean('is_verified');
             $table->timestamps();
         });
 
