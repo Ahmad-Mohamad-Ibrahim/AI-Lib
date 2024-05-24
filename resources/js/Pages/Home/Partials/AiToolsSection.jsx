@@ -31,8 +31,8 @@ const chat = [
 
 export default function AiToolsSection() {
     return (
-        <section className="flex justify-evenly gap-2 bg-gradient-to-r from-primary-shade-200 via-secondary to-accent p-8">
-            <div className="text-card flex flex-col gap-4 max-w-[50%] bg-secondary w-[50%] min-h-[700px]">
+        <section className="flex justify-evenly bg-gradient-to-r from-primary-shade-200 via-secondary to-accent p-8 px-16">
+            <div className="text-card flex flex-col gap-4 w-full lg:max-w-[50%] md:w-[50%] bg-secondary  min-h-[700px]">
                 {
                     chat.map((ele, index) => {
                         return <Delayed waitBeforeShow={4000 * index}>

@@ -1,4 +1,4 @@
-Can you modify the following list to remove duplicates and add description and image_url of a valid existing image in the places where empty string ("") is present in the attached json file
+Can you modify the following list to remove duplicates and add description and image_url of a valid existing and downloadable image with no svgs in the places where empty string ("") is present in the attached json file
 
 
 Name suggestions

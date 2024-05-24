@@ -8,6 +8,7 @@ body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     color: white;
     background-color: #05081a;
+    @apply lg:text-base text-sm;
 }
 
 @layer components {
@@ -330,4 +331,13 @@ body {
 
 .line {
     @apply h-[2px] w-[100%] inline-block bg-white;
+}
+
+/* Category */
+.category {
+    @apply flex items-center justify-center bg-primary-tint-700 px-2 font-medium w-[160px] rounded-lg py-1 text-center text-xs lg:text-base;
+}
+
+.footer-link {
+    @apply text-gray-300 hover:text-white hover:bg-primary-tint-900 px-4 p-1 rounded-lg;
 }

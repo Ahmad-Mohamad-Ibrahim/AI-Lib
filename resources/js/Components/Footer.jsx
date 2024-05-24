@@ -5,14 +5,14 @@ import { UilFacebookF, UilTwitter, UilInstagram } from '@iconscout/react-unicons
 export default function Footer() {
     return (
         <footer className="min-h-[600px] bg-secondary flex flex-col py-24 px-4">
-            <div className="flex gap-8">
+            <div className="flex flex-col lg:flex-row gap-8">
 
-                <div className="flex w-[30%] items-center gap-16">
-                    <h4 class="font-bold text-4xl">AI Arsenal</h4>
-                    <img width="96" height="96" src={Logo}
+                <div className="flex flex-row-reverse lg:w-[30%] justify-end items-center gap-16">
+                    <h4 class="font-bold text-2xl lg:text-4xl">AI Arsenal</h4>
+                    <img width="64" height="64" src={Logo}
                         alt="Company Logo" />
                 </div>
-                <div className="flex flex-col gap-4 max-w-[30%]">
+                <div className="flex flex-col gap-4 lg:max-w-[30%]">
                     <strong className="font-bold text-xl">About AI Arsenal</strong>
 
                     <p>
@@ -22,25 +22,24 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                    <a href="">
-                        <strong className="font-bold text-xl">Quick Links</strong>
-                    </a>
-                    <a href="">
+                    <h5 className="font-bold text-xl px-4">Quick Links</h5>
+
+                    <a className="footer-link" href="">
                         About Us
                     </a>
-                    <a href="">
+                    <a className="footer-link" href="">
                         AI tools
                     </a>
-                    <a href="">
+                    <a className="footer-link" href="">
                         Forum
                     </a>
-                    <a href="">
+                    <a className="footer-link" href="">
                         Contact
                     </a>
-                    <a href="">
+                    <a className="footer-link" href="">
                         Privacy Policy
                     </a>
-                    <a href="">
+                    <a className="footer-link" href="">
                         Terms of Service
                     </a>
 
@@ -48,6 +47,7 @@ export default function Footer() {
 
 
             </div>
+
             <div className="line mb-12 mt-32"></div>
             <div className="flex gap-8 justify-center items-center">
                 <a href="#" target="_blank">
@@ -64,7 +64,7 @@ export default function Footer() {
 
             </div>
 
-            <div class="text-center my-8">
+            <div className="text-center my-8">
                 <p>&copy; 2024 AI Arsenal. All rights reserved.</p>
             </div>
 

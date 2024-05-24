@@ -20,7 +20,7 @@ class AiToolResource extends JsonResource
             'name' => $this->name,
             'website' => $this->website,
             'description' => $this->description,
-            'image' => $this->image,
+            'image' => asset("storage") . "/" . $this->image,
             'launch_date' => (new Carbon($this->launch_date))->format('d/m/Y'),
             'rating' => $this->rating,
             'is_accessible' => $this->is_accessible,

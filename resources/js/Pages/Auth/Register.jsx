@@ -30,6 +30,7 @@ export default function Register() {
         <GuestLayout>
             <Head title="Register" />
 
+            <section className="w-full md:w-[50%] mx-auto px-10 py-4 my-20 text-primary-shade-600">
             <form onSubmit={submit}>
                 <div>
                     <InputLabel htmlFor="name" value="Name" />
@@ -112,6 +113,7 @@ export default function Register() {
                     </PrimaryButton>
                 </div>
             </form>
+            </section>
         </GuestLayout>
     );
 }

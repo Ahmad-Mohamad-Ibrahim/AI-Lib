@@ -1,7 +1,11 @@
 import React from 'react'
 import { UilSearch } from '@iconscout/react-unicons';
 import SearchBox from '@/Components/SearchBox';
+import { router } from '@inertiajs/react';
 export default function HeroSection() {
+    const searchTools = (val) => {
+        router.get(route('tools.index') , {'search' : val});
+    }
     return (
         <section className="flex flex-col-reverse justify-center lg:flex-row lg:justify-evenly font-poppins text-white w-full 
         lg:h-screen bg-cover bg-center bg-no-repeat bg-[url('../images/hero-section-mobile.jpg')] 
@@ -15,7 +19,7 @@ export default function HeroSection() {
                     ipsum ipsam voluptatibus voluptate!
                 </p>
 
-                <SearchBox />
+                <SearchBox onSearch={searchTools} />
             </div>
 
             <div className="svg-frame w-[100px] h-[100px] lg:w-[300px] lg:h-[300px] lg:right-20">

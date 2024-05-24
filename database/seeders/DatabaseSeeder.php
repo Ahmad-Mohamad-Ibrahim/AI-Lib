@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\AiTool;
 use App\Models\Category;
+use App\Models\Role;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
@@ -83,5 +84,9 @@ class DatabaseSeeder extends Seeder
 
             $toolModel->save();
         }
+
+        // seed roles
+        Role::create(['name' => 'user']);
+        Role::create(['name' => 'admin']);
     }
 }

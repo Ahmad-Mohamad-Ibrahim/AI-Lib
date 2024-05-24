@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAiToolRequest;
 use App\Http\Requests\UpdateAiToolRequest;
 use App\Http\Resources\AiToolResource;
+use App\Http\Resources\CategoryResource;
 use App\Models\AiTool;
+use App\Models\Category;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class AiToolController extends Controller
@@ -16,12 +19,29 @@ class AiToolController extends Controller
     public function index()
     {
         $query = AiTool::query();
+
+        $query->where('is_verified' , true);
+
+        if(request('category')) {
+            $query->where('category_id', request('category'));
+        }
+
+        if(request('search')) {
+            $query->where('name','like','%'. request('search') .'%');
+        }
+        if(request('orderBy')) {
+            $query->orderBy(request('orderBy'), 'DESC');
+        }
         
-        $tools = $query->paginate(8)->onEachSide(1);
+        $tools = $query->paginate(9)->onEachSide(1);
+
+        $categories = Category::all();
 
         Inertia::share('sharedTools', AiToolResource::collection($tools) );
         return Inertia::render('Tools/Tools', [
             'tools' => AiToolResource::collection($tools),
+            'queryParams' => request()->query() ? request()->query() : null,
+            'categories' => CategoryResource::collection($categories)
         ]);
     }
 
@@ -30,7 +50,11 @@ class AiToolController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        // dd("hello");
+        return Inertia::render('Tools/ToolAdd/ToolAdd' , [
+            'categories' => CategoryResource::collection($categories),
+        ]);
     }
 
     /**
@@ -44,9 +68,21 @@ class AiToolController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AiTool $aiTool)
+    public function show(string $id)
     {
-        //
+        // return Inertia::render('Tool/Tool', [
+        //     'tool' => new AiToolResource($aiTool),
+        // ]);
+        // get the model
+        $aiTool = AiTool::find($id);
+
+        if($aiTool && $aiTool->is_verified) {
+            return Inertia::render('Tools/Tool/Tool', [
+                'tool' => new AiToolResource($aiTool),
+            ]);
+        } else {
+            abort(404);
+        }
     }
 
     /**
