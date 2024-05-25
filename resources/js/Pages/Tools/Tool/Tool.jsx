@@ -11,13 +11,13 @@ export default function Tool({ auth, tool }) {
             {
                 auth.user ? <Authenticated auth={auth}>
                     < Head title={`Tool - ${tool.data.name}`} />
-                    <SingleToolView tool={tool.data} />
+                    <SingleToolView tool={tool.data} auth={auth} />
                     <Reviews />
 
                 </Authenticated> :
                     <Guest auth={auth}>
                         <Head title={`Tool - ${tool.data.name}`} />
-                        <SingleToolView tool={tool.data} />
+                        <SingleToolView tool={tool.data} auth={null} />
                         <Reviews />
 
                     </Guest>

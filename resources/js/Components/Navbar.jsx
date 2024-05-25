@@ -8,6 +8,7 @@ export default function Navbar({ auth, url }) {
 
     console.log(auth?.notifications);
     const [isMobNavHidden, setMobNavHidden] = useState(true);
+    const [showNotification, setShowNotification] = useState(false);
 
     const toggleMobileMenu = () => {
         setMobNavHidden(!isMobNavHidden);
@@ -44,6 +45,7 @@ export default function Navbar({ auth, url }) {
                     {auth?.user && <div className="hidden md:block">
                         <div className="ml-4 flex gap-5 items-center md:ml-6">
                             <button type="button"
+                                onClick={() => { setShowNotification(!showNotification) }}
                                 className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                 <span className="absolute -inset-1.5"></span>
                                 <span className="sr-only">View notifications</span>
@@ -135,6 +137,7 @@ export default function Navbar({ auth, url }) {
                                 <div className="text-sm font-medium leading-none text-gray-400">lary@example.com</div>
                             </div>
                             <button type="button"
+                                onClick={() => { setShowNotification(!showNotification) }}
                                 className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                 <span className="absolute -inset-1.5"></span>
                                 <span className="sr-only">View notifications</span>
@@ -145,12 +148,28 @@ export default function Navbar({ auth, url }) {
                                 </svg>
                             </button>
                             <form onSubmit={submit}>
-                                <input type="submit" value="Logout" />
+                                <input className="cursor-pointer" type="submit" value="Logout" />
                             </form>
                         </div>
                     }
                 </div>
             </div>
+            {(auth?.user && showNotification) && <div className="bg-primary z-50 text-white absolute right-[16%] mt-2 rounded-lg w-64 py-2 px-6  min-h-10">
+                {
+                    auth?.notifications?.map((ele, index) => {
+                        return <div>
+                            <Link key={index} href={ele.data.link}
+                                className="border-b- py-4 border-dashed border-white">
+                                <h5 className="text-base lg:text-xl font-bold py-2">{ele.data.title}</h5>
+                                <p>{ele.data.data}</p>
+                                <div className="p-2 mt-5 flex justify-around">
+                                </div>
+                            </Link>
+                        </div>
+                    })
+                }
+            </div>
+            }
         </nav>
     )
 }

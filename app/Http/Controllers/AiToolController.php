@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\User;
 use App\Notifications\AiToolPublished;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -103,7 +104,7 @@ class AiToolController extends Controller
         // get the model
         $aiTool = AiTool::find($id);
 
-        if ($aiTool && $aiTool->is_verified) {
+        if ($aiTool && ($aiTool->is_verified || (auth() && auth()->user()?->role === 'admin'))) {
             return Inertia::render('Tools/Tool/Tool', [
                 'tool' => new AiToolResource($aiTool),
             ]);
@@ -131,8 +132,22 @@ class AiToolController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AiTool $aiTool)
+    public function destroy(string $id)
     {
-        //
+        AiTool::find($id)->delete();
+        // $aiTool->save();
+        return to_route('tools.index')
+            ->with('success', 'tool deleted successfully');;
+    }
+
+    public function verify(string $id)
+    {
+        DB::table('ai_tools')
+            ->where("ai_tools.id", '=',  $id)
+            ->limit(1)
+            ->update(['ai_tools.is_verified' => true]);
+
+        return to_route('tools.index')
+            ->with('success', 'tool has been verified');
     }
 }

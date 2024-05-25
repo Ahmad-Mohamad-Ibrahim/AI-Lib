@@ -53,6 +53,7 @@ class AiToolPublished extends Notification
     {
         return [
             'type' => 'tool_publish',
+            'title' => 'Tool Published',
             'data' => 'A new Ai tool have been published with name ' . $this->aiToolName,
             'notifiable' => $notifiable,
             'link' => route('tools.show', $this->aiToolId),
@@ -68,6 +69,7 @@ class AiToolPublished extends Notification
     {
         return [
             'type' => 'tool_publish',
+            'title' => 'Tool Published',
             'data' => 'A new Ai tool have been published with name ' . $this->aiToolName,
             'notifiable' => $notifiable,
             'link' => route('tools.show', $this->aiToolId),

@@ -22,7 +22,7 @@ export default function Tools({ auth, categories, tools, queryParams, success })
     }
     return (
         <>
-            {success && <div className="bg-emerald-500 mb-2 px-4 text-white rounded">{success}</div>}
+            {success && <div onClick={() => {success = false} } className="bg-emerald-500 mb-2 px-4 text-white rounded">{success}</div>}
             {
                 auth.user ? <Authenticated auth={auth}>
                     < Head title="Tools" />
