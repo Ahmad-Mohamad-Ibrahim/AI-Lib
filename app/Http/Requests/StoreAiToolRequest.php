@@ -11,7 +11,7 @@ class StoreAiToolRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class StoreAiToolRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'description' => 'required',
+            'image' => 'nullable|image',
+            'launch_date' => 'required|date',
+            'website' => 'required|url:http,https',
+            'category_id' => 'required|exists:categories,id',
         ];
     }
 }

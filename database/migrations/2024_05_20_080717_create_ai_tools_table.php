@@ -16,11 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('website');
+            $table->foreignIdFor(\App\Models\User::class, 'user_id')->nullable()->constrained()->nullOnDelete();
             $table->string('image')->nullable();
             $table->date('launch_date');
-            $table->float('rating');
-            $table->boolean('is_accessible');
-            $table->boolean('is_verified');
+            $table->float('rating')->default(0.0);;
+            $table->boolean('is_accessible')->default(false);
+            $table->boolean('is_verified')->default(false);;
             $table->timestamps();
         });
 

@@ -10,13 +10,15 @@ export default function ToolAdd({ auth, categories }) {
             {
                 auth.user ? <Authenticated auth={auth}>
                     < Head title="Publish Tool" />
-                    <section class="px-12 mb-20">
-                        <ToolAddForm />
+                    <h1 className="p-8 my-20 font-bold text-5xl text-center">Create Tool</h1>
+                    <section className="px-12 mb-20">
+                        <ToolAddForm categories={categories.data} />
                     </section>
                 </Authenticated > : <Guest auth={auth}>
                     <Head title="Tools" />
-                    <section class="px-12 mb-20">
-                        <ToolAddForm />
+                    <h1 className="p-8 my-20 font-bold text-5xl text-center">Create Tool</h1>
+                    <section className="px-12 mb-20">
+                        <ToolAddForm categories={categories.data} />
                     </section>
                 </Guest>
             }

@@ -58,4 +58,19 @@ class AiToolPublished extends Notification
             'link' => route('tools.show', $this->aiToolId),
         ];
     }
+
+    /**
+     * Get the array representation of the notification.
+     *
+     * @return array<string, mixed>
+     */
+    public function toDatabase(object $notifiable): array
+    {
+        return [
+            'type' => 'tool_publish',
+            'data' => 'A new Ai tool have been published with name ' . $this->aiToolName,
+            'notifiable' => $notifiable,
+            'link' => route('tools.show', $this->aiToolId),
+        ];
+    }
 }

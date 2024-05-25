@@ -5,11 +5,12 @@ import React from 'react'
 import ToolsContainer from './Partials/ToolsContainer';
 import Pagination from '@/Components/Pagination';
 import ToolSearch from './Partials/ToolSearch';
+import { useState } from 'react';
 
-export default function Tools({ auth, categories,  tools, queryParams }) {
+export default function Tools({ auth, categories, tools, queryParams, success }) {
     // const onQuery
     queryParams = queryParams ? queryParams : {};
-    console.log(queryParams);
+    
     const queryByParams = (name, value) => {
         if (value) {
             queryParams[name] = value;
@@ -17,10 +18,11 @@ export default function Tools({ auth, categories,  tools, queryParams }) {
             delete queryParams[name];
         }
 
-        router.get(route('tools.index') , queryParams);
+        router.get(route('tools.index'), queryParams);
     }
     return (
         <>
+            {success && <div className="bg-emerald-500 mb-2 px-4 text-white rounded">{success}</div>}
             {
                 auth.user ? <Authenticated auth={auth}>
                     < Head title="Tools" />

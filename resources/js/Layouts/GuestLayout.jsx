@@ -1,4 +1,3 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
 import Footer from '@/Components/Footer';
 import Navbar from '@/Components/Navbar';
 

@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Navbar({ auth, url }) {
 
-
+    console.log(auth?.notifications);
     const [isMobNavHidden, setMobNavHidden] = useState(true);
 
     const toggleMobileMenu = () => {
@@ -108,10 +108,13 @@ export default function Navbar({ auth, url }) {
                 </div>
             </div>
 
-            <div className={`${isMobNavHidden ?  'hidden' : ''} md:hidden`} id="mobile-menu">
+            <div className={`${isMobNavHidden ? 'hidden' : ''} md:hidden`} id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                     <NavLinkMobile href="/" active={url == "/"}>Home</NavLinkMobile>
                     <NavLinkMobile href="/tools" active={url == "/tools"}>Tools</NavLinkMobile>
+                    <NavLinkMobile href={route('tools.create')} active={url == "/tools/create"}>
+                        Publish your tool now
+                    </NavLinkMobile>
                     <NavLinkMobile href="/contacts" active={url == "/contacts"}>Contacts</NavLinkMobile>
                     {
                         !auth?.user && <div> <NavLinkMobile href={route('login')} >Login</NavLinkMobile>

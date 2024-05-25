@@ -13,9 +13,11 @@ class AiTool extends Model
     protected $fillable = [
         'name',
         'description',
+        'image',
         'website',
         'launch_date',
         'rating',
+        'category_id'
     ];
 
     public function category() : BelongsTo   

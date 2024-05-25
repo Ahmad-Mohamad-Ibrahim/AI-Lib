@@ -33,7 +33,7 @@ Route::group(['prefix'=> '/tools'], function () {
     Route::get('/', [AiToolController::class, 'index'])->name('tools.index');
     Route::get('/publish', [AiToolController::class, 'create'])->name('tools.create');
     Route::get('/{id}', [AiToolController::class, 'show'])->name('tools.show');
-    // Route::post('/', [AiToolController::class, 'store'])->name('tools.store');
+    Route::post('/', [AiToolController::class, 'store'])->name('tools.store');
 });
 
 
