@@ -30,7 +30,7 @@ export default function ToolAddForm({ categories }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('tools.store'), data);
+        post(route('tools.store'));
     };
 
 

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Pagination({ links }) {
   return (
-    <nav class="text-center mt-4">
+    <nav className="text-center mt-4">
         {
         links.map((link, index) => {
             return <Link href={link.url || ""}

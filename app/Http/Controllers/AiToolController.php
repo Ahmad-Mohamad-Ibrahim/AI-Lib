@@ -10,10 +10,8 @@ use App\Models\AiTool;
 use App\Models\Category;
 use App\Models\User;
 use App\Notifications\AiToolPublished;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 
@@ -57,7 +55,7 @@ class AiToolController extends Controller
     public function create()
     {
         $categories = Category::all();
-        // dd("hello");
+        
         return Inertia::render('Tools/ToolAdd/ToolAdd', [
             'categories' => CategoryResource::collection($categories),
         ]);

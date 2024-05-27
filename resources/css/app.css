@@ -341,3 +341,7 @@ body {
 .footer-link {
     @apply text-gray-300 hover:text-white hover:bg-primary-tint-900 px-4 p-1 rounded-lg;
 }
+
+.no-scrollbar {
+    scrollbar-width: none;
+}

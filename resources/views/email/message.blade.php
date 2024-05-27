@@ -1,0 +1,3 @@
+<p>
+    {{ $messageBody }}
+</p>

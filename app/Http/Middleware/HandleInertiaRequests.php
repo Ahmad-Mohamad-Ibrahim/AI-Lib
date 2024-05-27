@@ -29,10 +29,16 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        // dd($request->user());
+        // can modify the user
+        $user = $request->user();
+        if($user && $user->image) {
+            $user->image = config('app.url') . '/storage/' . $user->image;
+        }
         return [
             ...parent::share($request),
             'auth' => [
-                'user' => $request->user(),
+                'user' => $user,
                 'notifications' => $request->user() ? $request->user()->notifications : null,
             ],
         ];

@@ -29,13 +29,29 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $data = $request->validated();
+        // dd($data);
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        $user = $request->user();
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+
+        // this fixed the bug when Eloquent retrieves the relative path from db it turns it into full uri
+        // and then $user->save() saves it as uri in db
+        // this is fixed by simply removing http://localhost:8000/storage/ from the uri to get /userimages/photo.jpg for example 
+        $appUrl = config('app.url') . '/storage/';
+        // dd($appUrl);
+        $user->image = str_replace($appUrl, '', $user->image);
+        // dd($user->image);
+
+        // dd($user);
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
         }
 
-        $request->user()->save();
+        $user->save();
+        // dd($request->user());
+
 
         return Redirect::route('profile.edit');
     }

@@ -1,31 +1,35 @@
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
+import TextArea from '@/Components/TextArea';
 import TextInput from '@/Components/TextInput';
-import { Link, useForm, usePage } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
+import { useForm } from '@inertiajs/inertia-react';
+import React from 'react'
 
-
-export default function UpdateProfileInformation({ mustVerifyEmail, status, className = '' }) {
-    const user = usePage().props.auth.user;
-    const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
+export default function ContactsForm({ user, className = ' '}) {
+    if(! user) {
+        user = {'name' : '','email':''};
+    }
+    const { data, setData, post, errors, processing, recentlySuccessful } = useForm({
         name: user.name,
         email: user.email,
+        body: '',
     });
 
     const submit = (e) => {
         e.preventDefault();
 
-        patch(route('profile.update'));
+        post(route('contact.store'));
     };
 
     return (
         <section className={className}>
             <header>
-                <h2 className="text-lg font-medium text-white">Profile Information</h2>
+                <h2 className="text-lg md:text-2xl font-medium text-white">Contact Us</h2>
 
                 <p className="mt-1 text-sm text-gray-300">
-                    Update your account's profile information and email address.
+                    Upload Image
                 </p>
             </header>
 
@@ -40,6 +44,7 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                         value={data.name}
                         onChange={(e) => setData('name', e.target.value)}
                         required
+                        isFocused
                         autoComplete="name"
                     />
 
@@ -51,41 +56,26 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
 
                     <TextInput
                         id="email"
-                        type="email"
                         className="mt-1 block w-full"
                         value={data.email}
                         onChange={(e) => setData('email', e.target.value)}
                         required
-                        autoComplete="username"
+                        autoComplete="email"
                     />
 
                     <InputError className="mt-2" message={errors.email} />
                 </div>
 
-                {mustVerifyEmail && user.email_verified_at === null && (
-                    <div>
-                        <p className="text-sm mt-2 text-gray-800">
-                            Your email address is unverified.
-                            <Link
-                                href={route('verification.send')}
-                                method="post"
-                                as="button"
-                                className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                            >
-                                Click here to re-send the verification email.
-                            </Link>
-                        </p>
+                <TextArea
+                        id="body"
+                        name="body"
+                        value={data.body}
+                        className="mt-1 block w-full"
+                        onChange={(e) => setData('body', e.target.value)}
+                    />
 
-                        {status === 'verification-link-sent' && (
-                            <div className="mt-2 font-medium text-sm text-green-600">
-                                A new verification link has been sent to your email address.
-                            </div>
-                        )}
-                    </div>
-                )}
-
-                <div className="flex items-center gap-4">
-                    <PrimaryButton disabled={processing}>Save</PrimaryButton>
+                <div className="flex justify-end items-center gap-4">
+                    <PrimaryButton disabled={processing}>Send</PrimaryButton>
 
                     <Transition
                         show={recentlySuccessful}
@@ -99,5 +89,5 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
                 </div>
             </form>
         </section>
-    );
+    )
 }

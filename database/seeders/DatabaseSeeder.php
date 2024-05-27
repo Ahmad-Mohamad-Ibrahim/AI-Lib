@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\AiTool;
 use App\Models\Category;
-use App\Models\Role;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -87,13 +86,16 @@ class DatabaseSeeder extends Seeder
         }
 
         // create admin
-        $admin = User::create([
+        User::create([
             'name' => 'admin',
             'email' => env('ADMIN_EMAIL'),
             'password' => bcrypt(env('ADMIN_PASSWORD')),
             'role' => 'admin',
             'email_verified_at' => now(),
         ]);
+
+        // create message
+        \App\Models\ChatMessage::factory(10)->recycle(\App\Models\Chat::factory()->create())->create();
     }
 
 }

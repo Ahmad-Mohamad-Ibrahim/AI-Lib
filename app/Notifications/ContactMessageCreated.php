@@ -2,24 +2,28 @@
 
 namespace App\Notifications;
 
+use App\Mail\ContactMessageMail;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class AiToolPublished extends Notification
+class ContactMessageCreated extends Notification
 {
     use Queueable;
+    protected $senderName;
+    protected $senderEmail;
+    protected $messageBody;
 
-    protected $aiToolName;
-    protected $aiToolId;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct($aiTool)
+    public function __construct($senderInfo)
     {
-        $this->aiToolName = $aiTool->name;
-        $this->aiToolId = $aiTool->id;
+        $this->senderName = $senderInfo["name"];
+        $this->senderEmail = $senderInfo["email"];
+        $this->messageBody = $senderInfo["body"];
     }
 
     /**
@@ -38,9 +42,11 @@ class AiToolPublished extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('A new Ai tool have been published with name ' . $this->aiToolName)
-                    ->action('Notification Action', route('tools.show', $this->aiToolId))
-                    ->line('Thank you for using our application!');
+            ->line('email' . $this->senderName)
+            ->line('A new message sent from ' . $this->senderName . " email: {$this->senderEmail}")
+            // ->action('Notification Action', url('/'))
+            ->line("Thank you for using our application!\nBest regards\nAI Arsenal");
+        // return  new ContactMessageMail();
     }
 
     /**
@@ -51,11 +57,10 @@ class AiToolPublished extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'type' => 'tool_publish',
-            'title' => 'Tool Published',
-            'data' => 'A new Ai tool have been published with name ' . $this->aiToolName,
+            'type' => 'contact_message_sent',
+            'title' => 'Message sent',
+            'data' => '' . $this->messageBody,
             'notifiable' => $notifiable,
-            'link' => route('tools.show', $this->aiToolId),
         ];
     }
 
@@ -67,11 +72,10 @@ class AiToolPublished extends Notification
     public function toDatabase(object $notifiable): array
     {
         return [
-            'type' => 'tool_publish',
-            'title' => 'Tool Published',
-            'data' => 'A new Ai tool have been published with name ' . $this->aiToolName,
+            'type' => 'contact_message_sent',
+            'title' => 'Message sent by ' . $this->senderName,
+            'data' => '' . $this->messageBody,
             'notifiable' => $notifiable,
-            'resource_link' => route('tools.show', $this->aiToolId),
             'link' => route('notification.show', $this->id),
         ];
     }
