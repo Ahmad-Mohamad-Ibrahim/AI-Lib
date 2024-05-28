@@ -2,6 +2,7 @@ import React from 'react';
 import { UilLink } from '@iconscout/react-unicons'
 import { Link } from '@inertiajs/react';
 import Image from '@/Components/Image';
+import Rating from '@/Components/Rating';
 
 export default function ToolRow({ tool }) {
     let { id, name, website, description, image, rating, category } = tool;
@@ -27,8 +28,8 @@ export default function ToolRow({ tool }) {
                     <div className="category">
                         <p>{category.name}</p>
                     </div>
-                    <p>Rating {rating}</p>
                 </div>
+                <Rating className="h-6" rating={rating} />
             </div>
             <div>
                 <p>{description}</p>

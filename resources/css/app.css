@@ -345,3 +345,8 @@ body {
 .no-scrollbar {
     scrollbar-width: none;
 }
+
+.no-scrolling {
+    overflow: hidden;
+    height: 100%;
+}

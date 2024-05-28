@@ -3,6 +3,7 @@ import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
 import { UilMessage } from '@iconscout/react-unicons'
 import { Head, Link, useForm } from '@inertiajs/react';
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function ChatPromptForm({current}) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -18,6 +19,7 @@ export default function ChatPromptForm({current}) {
 
     return (
         <section className="w-full bg-primary max-h-24 rounded-lg px-10 py-4 my-14 text-primary-shade-600">
+            {processing ? <ClipLoader loading={true} color='#ffffff' />:''}
             <form id="chatPromptForm" className="flex justify-center items-center gap-5" onSubmit={submit}>
                 <div>
                     <TextInput
@@ -30,7 +32,6 @@ export default function ChatPromptForm({current}) {
                         isFocused={true}
                         onChange={(e) => setData('prompt', e.target.value)}
                     />
-
                     <InputError message={errors.prompt} className="mt-2" />
                 </div>
 

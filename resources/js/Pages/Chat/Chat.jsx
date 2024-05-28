@@ -5,9 +5,13 @@ import React from 'react';
 import ChatOptions from './Partials/ChatOptions';
 import ChatMessages from './Partials/ChatMessages';
 import ChatPromptForm from './Partials/ChatPromptForm';
+import { useEffect } from 'react';
 
 export default function Chat({ auth, chats, messages, models, preferredModel, currentChat }) {
     console.log(models);
+    useEffect(() => {
+        document.body.classList.add("no-scrolling");
+    } , [])
 
     return (
         <>
@@ -16,26 +20,13 @@ export default function Chat({ auth, chats, messages, models, preferredModel, cu
                     < Head title="Chat" />
                     <section class="flex h-screen">
                         {/* content goes here */}
-                        <ChatOptions models={models} preferred={preferredModel} />
-                        <div className="flex flex-col">
+                        <ChatOptions chats={chats.data} models={models} preferred={preferredModel} />
+                        <div className="flex flex-col justify-end">
                             <ChatMessages messages={messages?.data} user={auth?.user} />
                             <ChatPromptForm current={currentChat} />
                         </div>
                     </section>
-                </Authenticated > : <Guest auth={auth}>
-                    <Head title="Chat" />
-                    <section class="flex h-screen">
-                        {/* content goes here */}
-                        <ChatOptions models={models} preferred={preferredModel} />
-                        <div className="flex flex-col">
-                            <ChatMessages messages={messages?.data} />
-                            <ChatPromptForm current={currentChat} />
-
-                        </div>
-
-
-                    </section>
-                </Guest>
+                </Authenticated >: ''
             }
         </>
     )

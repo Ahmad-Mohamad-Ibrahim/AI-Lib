@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ChatEditRequest;
 use App\Http\Resources\ChatMessageResource;
 use App\Http\Resources\ChatResource;
 use App\Models\Chat;
@@ -18,39 +19,11 @@ class ChatController extends Controller
      */
     public function index(Request $request)
     {
-        // if user is logged in get all his chats
-        $data = [];
-        $user = Auth()->user();
-        if ($user) {
-
-            $chats = $user->chats;
-            $latestChat = $chats->last();
-            $messages = $latestChat->messages;
-            $messages = $messages->reverse();
-            $data['chats'] = ChatResource::collection($chats);
-            $data['messages'] = ChatMessageResource::collection($messages);
-        }
-
-        if (!Cache::has('openai_models')) {
-            // get the models
-            $models = Http::withToken(config('services.openai.secret'))->get('https://api.openai.com/v1/models')->json('data');
-            // cache the models
-            Cache::forever('openai_models', $models);
-        }
-        $data['models'] = Cache::get('openai_models');
-
-        $data['preferredModel'] = Cache::get('model', 'gpt-3.5-turbo');
-
-        if (isset($data['chats'])) {
-            $data['currentChat'] = $data['chats']->last()->id;
-        }
-
-        return Inertia::render("Chat/Chat", $data);
     }
 
     public function setChatOption(Request $request)
     {
-        Cache::forever('model', $request?->model);
+        Cache::put('model', $request?->model);
 
         return ['code' => 200];
     }
@@ -66,6 +39,18 @@ class ChatController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+    public function store(Request $request)
+    {
+        // all the new chats will have the name (new chat)
+        $user = $request->user();
+        $chat = $user->chats()->create([
+            'name' => 'New Chat'
+        ]);
+
+        return to_route('chat.show', $chat->id);
+    }
+
     public function storeMessage(Request $request, string $id)
     {
         $chat = Chat::find($id);
@@ -105,15 +90,49 @@ class ChatController extends Controller
 
         $message->save();
 
-        return to_route('chat.index');
+        return to_route('chat.show', $chat->id);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id = null)
     {
-        //
+        // if user is logged in get all his chats
+        $data = [];
+        $user = Auth()->user();
+        if ($user) {
+
+            $chats = $user->chats;
+            $latestChat = null;
+            if ($id === null) {
+                $latestChat = $chats->last();
+            } else {
+                $latestChat = $chats->find($id); // check
+            }
+
+            $messages = $latestChat->messages;
+            $messages = $messages->reverse();
+            $data['chats'] = ChatResource::collection($chats);
+            $data['messages'] = ChatMessageResource::collection($messages);
+        }
+
+        if (!Cache::has('openai_models')) {
+            // get the models
+            $models = Http::withToken(config('services.openai.secret'))->get('https://api.openai.com/v1/models')->json('data');
+            // cache the models
+            Cache::forever('openai_models', $models);
+        }
+        
+        $data['models'] = Cache::get('openai_models');
+
+        $data['preferredModel'] = Cache::get('model', 'gpt-3.5-turbo');
+
+        if (isset($data['chats'])) {
+            $data['currentChat'] = $latestChat->id;
+        }
+
+        return Inertia::render("Chat/Chat", $data);
     }
 
     /**
@@ -127,9 +146,11 @@ class ChatController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ChatEditRequest $request, string $id)
     {
-        //
+        $data =  $request->validated();
+
+        return to_route('chat.show', $id);
     }
 
     /**
@@ -137,6 +158,9 @@ class ChatController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $chat = Chat::find($id);
+        $chat->delete();
+
+        return to_route('chat.show');
     }
 }

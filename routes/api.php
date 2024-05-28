@@ -8,6 +8,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::group(['prefix'=> '/chat', 'middleware' => ['auth', 'verified']], function () {
+Route::group(['prefix'=> '/chat'], function () {
     Route::post('/set-option', [ChatController::class,'setChatOption'])->name('chat.set-option');
 });

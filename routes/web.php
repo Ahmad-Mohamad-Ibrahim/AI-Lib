@@ -39,7 +39,10 @@ Route::group(['prefix'=> '/notifications'], function () {
 });
 
 Route::group(['prefix'=> '/chat', 'middleware' => ['auth', 'verified']], function () {
-    Route::get('/', [ChatController::class, 'index'])->name('chat.index');
+    Route::get('/{id?}', [ChatController::class, 'show'])->name('chat.show');
+    Route::post('/', [ChatController::class, 'store'])->name('chat.store');
+    Route::delete('/{id}', [ChatController::class, 'destroy'])->name('chat.destroy');
+    Route::patch('/{id}', [ChatController::class, 'update'])->name('chat.update');
     Route::post('/{id}', [ChatController::class, 'storeMessage'])->name('chat.store-message');
 });
 

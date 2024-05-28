@@ -32,7 +32,8 @@ export default {
                     '600': '#02030c',
                 },
                 accent: "#f45f89",
-                secondary: "#080E2C"
+                secondary: "#080E2C",
+                gpt: "#0ea882",
             },
             fontFamily: {
                 // sans: ['Figtree', ...defaultTheme.fontFamily.sans],
