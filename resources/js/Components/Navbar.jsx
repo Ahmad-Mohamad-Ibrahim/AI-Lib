@@ -49,6 +49,8 @@ export default function Navbar({ auth, url }) {
                                 </NavLink>
                                 <NavLink href={route('contact.create')} active={url == "/contact"}>Contact Us
                                 </NavLink>
+                                <NavLink href={route('gallery.index')} active={url == "/contact"}>Gallery
+                                </NavLink>
 
                             </div>
                         </div>
@@ -131,6 +133,8 @@ export default function Navbar({ auth, url }) {
                         Publish your tool now
                     </NavLinkMobile>
                     <NavLinkMobile href={route('contact.create')} active={url == "/contacts"}>Contact Us</NavLinkMobile>
+                    <NavLinkMobile href={route('gallery.index')} active={url == "/contacts"}>Gallery</NavLinkMobile>
+
                     {
                         user && <div> <NavLinkMobile href={route('login')} >Login</NavLinkMobile>
                             <NavLinkMobile href={route('register')}>Sign Up</NavLinkMobile></div>

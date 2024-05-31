@@ -3,6 +3,7 @@
 use App\Http\Controllers\AiToolController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileImageController;
@@ -40,10 +41,15 @@ Route::group(['prefix'=> '/notifications'], function () {
 
 Route::group(['prefix'=> '/chat', 'middleware' => ['auth', 'verified']], function () {
     Route::get('/{id?}', [ChatController::class, 'show'])->name('chat.show');
+    Route::post('/set-option/{id?}', [ChatController::class,'setChatOption'])->name('chat.set-option');
     Route::post('/', [ChatController::class, 'store'])->name('chat.store');
     Route::delete('/{id}', [ChatController::class, 'destroy'])->name('chat.destroy');
     Route::patch('/{id}', [ChatController::class, 'update'])->name('chat.update');
     Route::post('/{id}', [ChatController::class, 'storeMessage'])->name('chat.store-message');
+});
+
+Route::group(['prefix'=> '/gallery'], function () {
+    Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
 });
 
 Route::middleware(['auth', 'verified', AdminAuthorization::class])->group(function () {

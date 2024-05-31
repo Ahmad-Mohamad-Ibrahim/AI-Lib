@@ -23,7 +23,9 @@
     "dependencies": {
         "@iconscout/react-unicons": "^2.0.2",
         "@inertiajs/inertia-react": "^0.8.1",
+        "react-markdown": "^9.0.1",
         "react-spinners": "^0.13.8",
+        "remark-gfm": "^4.0.0",
         "typeit-react": "^2.7.1",
         "typewriter-effect": "^2.21.0"
     }

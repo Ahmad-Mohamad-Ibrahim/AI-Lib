@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import { UilTrashAlt } from '@iconscout/react-unicons';
 import { UilEdit } from '@iconscout/react-unicons'
 import { useState } from 'react';
@@ -15,13 +15,14 @@ export default function ChatOption({ chat }) {
             <h5>{chat.name}</h5>
         </Link>
 
-            {optionsShow && <div className="flex-col"><button className="p-1" onClick={() => { router.delete(route('chat.destroy', chat.id)) }} >
+           <div className={"flex-col " + (optionsShow ? '' :'invisible')}>
+            <button className="p-1" onClick={() => { router.delete(route('chat.destroy', chat.id)) }} >
                 <UilTrashAlt className="text-red-500 w-5" />
             </button>
                 <button>
                     <UilEdit className="text-blue-500 w-5" />
                 </button>
-            </div>}
+            </div>
         </div>
     )
 }

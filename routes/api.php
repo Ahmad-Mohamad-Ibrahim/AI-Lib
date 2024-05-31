@@ -9,5 +9,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::group(['prefix'=> '/chat'], function () {
-    Route::post('/set-option', [ChatController::class,'setChatOption'])->name('chat.set-option');
 });

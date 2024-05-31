@@ -350,3 +350,8 @@ body {
     overflow: hidden;
     height: 100%;
 }
+
+/* for markdown pre elements */
+pre {
+    @apply bg-primary p-4 rounded-lg;
+}

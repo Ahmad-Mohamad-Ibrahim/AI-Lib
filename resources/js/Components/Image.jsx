@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Image({ src, fallback, ...props }) {
+export default function Image({ src, fallback = null, ...props }) {
     return (
         <>
             {
