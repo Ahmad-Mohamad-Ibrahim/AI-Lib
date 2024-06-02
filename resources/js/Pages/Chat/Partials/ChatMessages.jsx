@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import ChatMessage from './ChatMessage';
-export default function ChatMessages({ messages, user }) {
+export default function ChatMessages({ messages, user, cached }) {
     const listRef = useRef(null);
     
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function ChatMessages({ messages, user }) {
             {
                 messages?.map((message) => {
                     return (
-                        <ChatMessage message={message} user={user} key={message.id} />
+                        <ChatMessage cached={cached} message={message} user={user} key={message.id} />
                     )
                 })
             }

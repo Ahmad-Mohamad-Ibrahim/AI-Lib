@@ -27,4 +27,13 @@ class NotificationController extends Controller
         }  
         return redirect(route('home'));
     }
+
+    public function delete(string $id)
+    {
+        $notification = DatabaseNotification::where('id', $id)
+        ->where('notifiable_id', Auth::user()->id)
+        ->firstOrFail();
+
+        $notification->delete();
+    }
 }

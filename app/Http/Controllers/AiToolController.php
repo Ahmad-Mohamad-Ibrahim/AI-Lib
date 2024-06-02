@@ -6,6 +6,7 @@ use App\Http\Requests\StoreAiToolRequest;
 use App\Http\Requests\UpdateAiToolRequest;
 use App\Http\Resources\AiToolResource;
 use App\Http\Resources\CategoryResource;
+use App\Http\Resources\ReviewResource;
 use App\Models\AiTool;
 use App\Models\Category;
 use App\Models\User;
@@ -105,6 +106,8 @@ class AiToolController extends Controller
         if ($aiTool && ($aiTool->is_verified || (auth() && auth()->user()?->role === 'admin'))) {
             return Inertia::render('Tools/Tool/Tool', [
                 'tool' => new AiToolResource($aiTool),
+                'reviews' => ReviewResource::collection($aiTool->reviews),
+                'error' => session('error'),
             ]);
         } else {
             abort(404);
@@ -114,18 +117,18 @@ class AiToolController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AiTool $aiTool)
-    {
-        //
-    }
+    // public function edit(AiTool $aiTool)
+    // {
+    //     //
+    // }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAiToolRequest $request, AiTool $aiTool)
-    {
-        //
-    }
+    // public function update(UpdateAiToolRequest $request, AiTool $aiTool)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.

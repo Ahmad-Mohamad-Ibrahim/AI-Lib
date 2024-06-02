@@ -7,7 +7,7 @@ import adminPlaceholder from '../../../../images/admin-placeholder.jpeg';
 import placeholder from '../../../../images/placeholder.jpeg';
 
 
-export default function ChatMessage({ message, user }) {
+export default function ChatMessage({ message, user, cached }) {
     let userImage = null;
     // this is to remove the http://localhost:8000/storage/ that is by default there if the output is
     // "" then set userImage = "" or null else you set userImage = user.image
@@ -23,10 +23,12 @@ export default function ChatMessage({ message, user }) {
                     src={userImage}
                     fallback={user?.role === 'admin' ? adminPlaceholder : placeholder} alt="" />}
             <div className="flex flex-col gap-2">
-                <Markdown remarkPlugins={[remarkGfm]}>{message.body}</Markdown>
+                <Markdown remarkPlugins={[remarkGfm]}>
+                    {message.body}
+                </Markdown>
+                {cached && message.speaker === 'gpt' && <p className='cached'>Cached</p>}
 
             </div>
-            {/* <p>{message.body}</p> */}
         </div>
     )
 }

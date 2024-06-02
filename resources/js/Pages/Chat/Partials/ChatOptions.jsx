@@ -8,7 +8,6 @@ import ChatOption from './ChatOption';
 
 export default function ChatOptions({ chats, models, preferred, currentId }) {
   const optionsForm = useRef(null);
-
   return (
     <aside class="w-[100%] md:w-[40%] bg-primary-shade-600 h-full px-4 py-2 flex flex-col items-center">
         <div className="mt-8">

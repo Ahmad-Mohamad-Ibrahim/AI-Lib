@@ -4,6 +4,8 @@ import Image from '@/Components/Image';
 import PrimaryButton from '@/Components/PrimaryButton';
 import DangerButton from '@/Components/DangerButton';
 import { router } from '@inertiajs/react';
+import ReviewForm from './Partials/ReviewForm';
+import Rating from '@/Components/Rating';
 
 export default function SingleToolView({ tool, auth }) {
     let { id, name, website, description, image, rating, category } = tool;
@@ -25,7 +27,7 @@ export default function SingleToolView({ tool, auth }) {
                     {description}
                 </p>
                 <div class="flex flex-row justify-evenly items-center">
-                    <p className="font-bold">Rating: {rating}</p>
+                    <Rating className="h-6" rating={rating} />
                     <div className="category">
                         <p>
                             {category.name}
@@ -40,6 +42,8 @@ export default function SingleToolView({ tool, auth }) {
                         <DangerButton onClick={() => { router.delete(route('tools.destroy', id)) }}>Delete</DangerButton>
                     </div>
                 }
+
+                
             </section>
         </>
     )

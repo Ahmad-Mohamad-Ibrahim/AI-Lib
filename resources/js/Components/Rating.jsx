@@ -10,10 +10,9 @@ export default function Rating({ rating, className = '' }) {
         let counter = 0;
         let starsCopy = [];
         rating = Math.round(rating * 2) / 2;
-        console.log(rating);
         
         while(counter < 5) {
-            if(rating > 1) {
+            if(rating >= 1) {
                 starsCopy.push(1);
             }
             else if(rating === 0.5) {
@@ -30,6 +29,8 @@ export default function Rating({ rating, className = '' }) {
         setStars(starsCopy);
        
     } , []);
+
+
   return (
     <div className={"flex items-center gap-2 " + className}>
     {

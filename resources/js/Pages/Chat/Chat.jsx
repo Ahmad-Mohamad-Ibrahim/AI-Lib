@@ -8,7 +8,7 @@ import ChatPromptForm from './Partials/ChatPromptForm';
 import { useEffect } from 'react';
 import InputError from '@/Components/InputError';
 
-export default function Chat({ auth, chats, messages, models, preferredModel, currentChat, error = null }) {
+export default function Chat({ auth, chats, messages, models, preferredModel, currentChat, cached , error = null }) {
     console.log(models);
     useEffect(() => {
         document.body.classList.add("no-scrolling");
@@ -27,7 +27,7 @@ export default function Chat({ auth, chats, messages, models, preferredModel, cu
                         {/* content goes here */}
                         <ChatOptions currentId={currentChat} chats={chats.data} models={models} preferred={preferredModel} />
                         <div className="flex flex-col justify-end">
-                            <ChatMessages messages={messages?.data} user={auth?.user} />
+                            <ChatMessages cached={cached} messages={messages?.data} user={auth?.user} />
                             {error && <InputError message={error} className='text-xl p-2 bg-red-600 text-white rounded-lg ml-2 mr-auto' /> }
                             <ChatPromptForm current={currentChat} />
                         </div>

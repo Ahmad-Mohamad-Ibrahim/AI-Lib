@@ -355,3 +355,21 @@ body {
 pre {
     @apply bg-primary p-4 rounded-lg;
 }
+
+.cached {
+    @apply bg-primary-tint-600 p-2 text-white rounded-md; 
+}
+
+/* note the child div must take overflow hidden */
+.slide-down {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+}
+
+.slide-up {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 500ms;
+}

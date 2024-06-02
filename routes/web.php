@@ -7,6 +7,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileImageController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Middleware\AdminAuthorization;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -30,6 +31,10 @@ Route::group(['prefix'=> '/tools'], function () {
     Route::post('/', [AiToolController::class, 'store'])->name('tools.store');
 });
 
+Route::group(['prefix'=> '/reviews', 'middleware'=> ['auth' , 'verified']], function () {
+    Route::post('/', [ReviewController::class, 'store'])->name('reviews.store');
+});
+
 Route::group(['prefix'=> '/contact'], function () {
     Route::get('/', [ContactMessageController::class, 'create'])->name('contact.create');
     Route::post('/', [ContactMessageController::class, 'store'])->name('contact.store');
@@ -37,6 +42,7 @@ Route::group(['prefix'=> '/contact'], function () {
 
 Route::group(['prefix'=> '/notifications'], function () {
     Route::get('/{notification}', [NotificationController::class, 'show'])->name('notification.show');
+    Route::delete('/{notification}', [NotificationController::class, 'delete'])->name('notification.destroy');
 });
 
 Route::group(['prefix'=> '/chat', 'middleware' => ['auth', 'verified']], function () {
@@ -51,6 +57,7 @@ Route::group(['prefix'=> '/chat', 'middleware' => ['auth', 'verified']], functio
 Route::group(['prefix'=> '/gallery'], function () {
     Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
 });
+
 
 Route::middleware(['auth', 'verified', AdminAuthorization::class])->group(function () {
     Route::put('/tools/verify/{id}', [AiToolController::class, 'verify'])->name('tools.verify');

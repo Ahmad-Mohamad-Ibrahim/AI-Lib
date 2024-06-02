@@ -6,11 +6,13 @@ import { Link, router } from "@inertiajs/react";
 import { useState } from "react";
 import adminPlaceholder from '../../images/admin-placeholder.jpeg';
 import placeholder from '../../images/placeholder.jpeg';
+import { UilTrashAlt } from '@iconscout/react-unicons';
 
-export default function Navbar({ auth, url }) {
+
+export default function Navbar({ auth }) {
     // console.log(auth?.user?.notifications);
     const user = auth?.user ? auth?.user : null;
-
+    const url = window.location.pathname;
     const [isMobNavHidden, setMobNavHidden] = useState(true);
     const [showNotification, setShowNotification] = useState(false);
 
@@ -24,7 +26,6 @@ export default function Navbar({ auth, url }) {
     // "" then set userImage = "" or null else you set userImage = user.image
     if (user && user?.image) {
         userImage = !user.image.replace(window.location.protocol + '//' + window.location.host + '/storage/', '') ? "" : user.image;
-        console.log(userImage);
     }
     const submit = (e) => {
         e.preventDefault();
@@ -43,13 +44,13 @@ export default function Navbar({ auth, url }) {
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
                                 <NavLink href={route('home')} active={url == "/"} >Home</NavLink>
-                                <NavLink href={route('tools.index')} active={url == route('tools.index')}>Tools</NavLink>
-                                <NavLink href={route('tools.create')} active={url == "/tools/create"}>
+                                <NavLink href={route('tools.index')} active={url == "/tools"}>Tools</NavLink>
+                                <NavLink href={route('tools.create')} active={url == "/tools/publish"}>
                                     Publish your tool now
                                 </NavLink>
                                 <NavLink href={route('contact.create')} active={url == "/contact"}>Contact Us
                                 </NavLink>
-                                <NavLink href={route('gallery.index')} active={url == "/contact"}>Gallery
+                                <NavLink href={route('gallery.index')} active={url == "/gallery"}>Gallery
                                 </NavLink>
 
                             </div>
@@ -181,12 +182,17 @@ export default function Navbar({ auth, url }) {
                             <Link
                                 key={index} href={notification.data.link}
                                 className="border-b-1 py-4 border-dashed border-white"
-                                >
+                            >
                                 <h5 className="text-base lg:text-xl font-bold py-2">{notification.data.title}</h5>
                                 <p>{notification.data.data}</p>
-                                <div className="p-2 mt-5 flex justify-around">
-                                </div>
+
                             </Link>
+                            <div className="p-2 mt-5 flex justify-around">
+                                <button className="p-2 h-5 w-5"
+                                    onClick={() => { router.delete(route('notification.destroy', notification.id)) }}>
+                                    <UilTrashAlt className="text-red-500 w-5" />
+                                </button>
+                            </div>
                         </div>
                     })
                 }
